@@ -30,7 +30,10 @@
 
     <br>
 
-    <a href="{{ url_for('download_csv') }}">Download CSV</a>
+    <a href="{{ url_for('download_csv') }}">Download CSV</a><br>
+    <form action="{{ url_for('logout') }}" method="post">
+        <input type="submit" value="Logout">
+    </form>
 </body>
 </html>
 

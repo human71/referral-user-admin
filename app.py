@@ -4,7 +4,7 @@ import csv
 from io import StringIO
 
 app = Flask(__name__)
-app.secret_key = 'babamoni'
+app.secret_key = 'human71'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)

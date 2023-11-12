@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Page</title>
+</head>
+<body>
+    <h2>Admin Page</h2>
+    <form method="post" action="{{ url_for('search') }}">
+        <label for="referral_code">Search by Referral Code:</label>
+        <input type="text" id="referral_code" name="referral_code" required>
+        <input type="submit" value="Search">
+    </form>
+
+    <br>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Referral Code</th>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>{{ user['name'] }}</td>
+                <td>{{ user['phone_number'] }}</td>
+                <td>{{ user['referral_code'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+
+    <a href="{{ url_for('download_csv') }}">Download CSV</a>
+</body>
+</html>
+
